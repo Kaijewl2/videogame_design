@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://vevtag5f0dnh"]
+[gd_scene load_steps=17 format=3 uid="uid://vevtag5f0dnh"]
 
 [ext_resource type="Texture2D" uid="uid://bo6v2ka4acp8g" path="res://icon.svg" id="1_fuej0"]
 [ext_resource type="PackedScene" uid="uid://ce08gjhvd82ms" path="res://scenes/player_3d.tscn" id="1_qudg5"]
@@ -21,11 +21,35 @@ fog_light_color = Color(0.113368, 0.0609869, 0.0583537, 1)
 adjustment_color_correction = ExtResource("1_fuej0")
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_fuej0"]
-vertices = PackedVector3Array(7.53556, -0.0857321, 0.601503, 7.53556, -0.0857321, -0.148497, 7.28556, -0.0857321, -8.8985, -8.46444, -0.0857321, -8.8985, -8.46444, -0.0857321, 0.601503, 12.7856, -0.0857321, -0.648497, 13.0356, -0.0857321, 0.351503, 17.7856, -0.0857321, 0.351503, 17.7856, -0.0857321, -8.8985, 7.78556, -0.0857321, -0.648497, 12.7856, -0.0857321, 1.1015, 9.03556, -0.0857321, 13.3515, 17.7856, -0.0857321, 13.3515, 9.28556, -0.0857321, 1.1015, 7.78556, -0.0857321, 1.1015, -8.46444, -0.0857321, 13.3515)
-polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(3, 0, 4), PackedInt32Array(6, 5, 7), PackedInt32Array(7, 5, 8), PackedInt32Array(9, 1, 2), PackedInt32Array(9, 2, 5), PackedInt32Array(5, 2, 8), PackedInt32Array(6, 7, 10), PackedInt32Array(10, 7, 12), PackedInt32Array(10, 12, 11), PackedInt32Array(11, 13, 10), PackedInt32Array(14, 13, 11), PackedInt32Array(14, 11, 0), PackedInt32Array(0, 11, 4), PackedInt32Array(4, 11, 15)]
+vertices = PackedVector3Array(-1.04474, -0.0857319, -9.39494, 0.955259, -0.0857319, -9.64494, 0.955259, -0.0857319, -20.1449, -16.0447, -0.0857319, -7.39494, -1.04474, -0.0857319, -7.39494, -16.0447, -0.0857319, -20.1449, 6.70526, -0.0857319, -7.39494, 6.95526, -0.0857319, -7.39494, 6.95526, -0.0857319, -8.89494, 6.45526, -0.0857319, -9.14494, 2.95526, -0.0857319, -9.64494, 8.70526, -0.0857319, -9.14494, 8.70526, -0.0857319, -20.1449, 3.20526, -0.0857319, -7.39494, 3.45526, -0.0857319, -7.39494, 3.70526, -0.0857319, -9.14494, 7.20526, -0.0857319, -6.39494, 6.70526, -0.0857319, -6.14494, 35.7053, -0.0857319, -20.1449, 9.20526, -0.0857319, -8.89494, 8.95526, -0.0857319, -6.39494, 6.95526, -0.0857319, 32.1051, 35.7053, -0.0857319, 32.1051, -0.0447407, 1.16427, -8.64494, -0.0447407, 1.16427, -6.39494, 2.20526, 1.16427, -6.39494, 2.20526, 1.16427, -8.64494, 4.45526, 0.914268, -8.14494, 4.45526, 0.914268, -6.89494, 5.70526, 0.914268, -6.89494, 5.70526, 0.914268, -8.14494, 3.70526, -0.0857319, -5.89494, 2.95526, -0.0857319, -5.39494, -0.794741, -0.0857319, -5.39494, -16.0447, -0.0857319, 32.1051)
+polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(0, 4, 3), PackedInt32Array(3, 5, 0), PackedInt32Array(0, 5, 2), PackedInt32Array(7, 6, 8), PackedInt32Array(8, 6, 9), PackedInt32Array(9, 10, 11), PackedInt32Array(11, 10, 12), PackedInt32Array(12, 10, 2), PackedInt32Array(14, 13, 15), PackedInt32Array(15, 13, 10), PackedInt32Array(10, 1, 2), PackedInt32Array(11, 8, 9), PackedInt32Array(9, 15, 10), PackedInt32Array(7, 16, 6), PackedInt32Array(6, 16, 17), PackedInt32Array(19, 18, 20), PackedInt32Array(20, 18, 21), PackedInt32Array(21, 18, 22), PackedInt32Array(16, 20, 17), PackedInt32Array(17, 20, 21), PackedInt32Array(11, 12, 19), PackedInt32Array(19, 12, 18), PackedInt32Array(26, 25, 23), PackedInt32Array(23, 25, 24), PackedInt32Array(30, 29, 27), PackedInt32Array(27, 29, 28), PackedInt32Array(14, 31, 13), PackedInt32Array(13, 31, 32), PackedInt32Array(33, 32, 21), PackedInt32Array(31, 17, 32), PackedInt32Array(32, 17, 21), PackedInt32Array(3, 4, 33), PackedInt32Array(3, 33, 34), PackedInt32Array(34, 33, 21)]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fuej0"]
+albedo_color = Color(0, 0.454902, 0, 1)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_qejwk"]
 data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5ax7r"]
+albedo_color = Color(0.670588, 0.215686, 0.729412, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s2mdy"]
+albedo_color = Color(0, 0.65098, 0.905882, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eyxgl"]
+albedo_color = Color(0.352941, 0.203922, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4lc55"]
+albedo_color = Color(0, 0.0509804, 0.0784314, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_482ig"]
+albedo_color = Color(0, 0.0509804, 0.0784314, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bygsx"]
+albedo_color = Color(0, 0.0509804, 0.0784314, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tsfeg"]
+albedo_color = Color(0, 0.0509804, 0.0784314, 1)
 
 [node name="boss_battle" type="Node3D"]
 
@@ -41,22 +65,65 @@ directional_shadow_split_1 = 0.657
 boss_path = NodePath("../NavigationRegion3D/boss")
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0144536, -0.000561237, -0.105675)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0419728, -0.0293183, -0.0869086)
 navigation_mesh = SubResource("NavigationMesh_fuej0")
 
 [node name="boss" parent="NavigationRegion3D" instance=ExtResource("2_qejwk")]
 transform = Transform3D(0.523582, 0, 0.57139, 0, 0.775, 0, -0.57139, 0, 0.523582, -6.73641, -0.449551, -7.96154)
 player_path = NodePath("../../player_3D")
 
-[node name="MeshInstance3D" type="CSGBox3D" parent="NavigationRegion3D"]
-transform = Transform3D(11.685, 0, 0, 0, 11.685, 0, 0, 0, 11.685, 4.70557, -0.679542, 2.2865)
-size = Vector3(2.33975, 0.0267334, 1.96518)
+[node name="floor" type="CSGBox3D" parent="NavigationRegion3D"]
+transform = Transform3D(11.685, 0, 0, 0, 11.685, 0, 0, 0, 11.685, 9.81329, -0.679542, 5.92891)
+use_collision = true
+size = Vector3(4.51143, 0.0267334, 4.54837)
+material = SubResource("StandardMaterial3D_fuej0")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/MeshInstance3D"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/floor"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/MeshInstance3D/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/floor/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_qejwk")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.1757, 0.817993, 0.270569)
-size = Vector3(4.26343, 2.63599, 0.458862)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.06212, -0.167703, -7.73398)
+use_collision = true
+size = Vector3(1.15189, 0.605957, 1.64066)
+material = SubResource("StandardMaterial3D_5ax7r")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.11384, -0.127176, -7.55281)
+use_collision = true
+size = Vector3(2.09177, 1.09619, 2.02467)
+material = SubResource("StandardMaterial3D_s2mdy")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.04903, 0.000570741, -7.50277)
+use_collision = true
+size = Vector3(2.87516, 1.66467, 3.09073)
+material = SubResource("StandardMaterial3D_eyxgl")
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
+use_collision = true
+
+[node name="wall" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.9646, 3.0173, 5.85495)
+use_collision = true
+size = Vector3(0.343528, 7.12195, 52.3945)
+material = SubResource("StandardMaterial3D_4lc55")
+
+[node name="wall2" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.84003, 3.01016, 32.1683)
+use_collision = true
+size = Vector3(52.5982, 7.12195, 0.434998)
+material = SubResource("StandardMaterial3D_482ig")
+
+[node name="wall3" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.77572, 3.13911, -20.5213)
+use_collision = true
+size = Vector3(52.7399, 7.12195, 0.434998)
+material = SubResource("StandardMaterial3D_bygsx")
+
+[node name="wall4" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.3818, 3.0346, 5.85913)
+use_collision = true
+size = Vector3(0.343528, 7.12195, 52.2334)
+material = SubResource("StandardMaterial3D_tsfeg")
