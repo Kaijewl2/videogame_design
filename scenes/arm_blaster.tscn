@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://devo36uy4udi" path="res://scripts/gun.gd" id="1_6bf5m"]
 [ext_resource type="PackedScene" uid="uid://clr55dtonsr15" path="res://models/ak47variant.fbx" id="2_ngp04"]
 [ext_resource type="AudioStream" uid="uid://bus2kerb6gfqj" path="res://sounds/AK47_sound.mp3" id="3_o4i7d"]
-[ext_resource type="AudioStream" uid="uid://lkygg552owlv" path="res://sounds/perfect-fart.mp3" id="4_ngp04"]
+[ext_resource type="AudioStream" uid="uid://bij1n8qqoc6m0" path="res://sounds/hitmarker.mp3" id="4_ngp04"]
 
 [sub_resource type="Animation" id="Animation_wpxjn"]
 length = 0.001
@@ -146,6 +146,6 @@ libraries = {
 
 [node name="hit_indicator" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_ngp04")
-volume_db = -11.408
+volume_db = -4.849
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

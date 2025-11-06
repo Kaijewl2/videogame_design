@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-var mouse_sense := 0.003
+var mouse_sense := 0.005
 var boss = null
 var t_bob = 0.0
 
