@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-var mouse_sense := 0.005
+var mouse_sense := 0.003
 var boss = null
 var t_bob = 0.0
 
@@ -36,7 +36,7 @@ func _process(delta: float):
 	
 	# Free mouse if 'esc' is pressed
 	if Input.is_action_just_pressed("ui_cancel"):
-		get_tree().quit()
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	
 	if Input.is_action_pressed("ctrl") and stamina_bar.value > 0.0:
 		$dash_sound.play()

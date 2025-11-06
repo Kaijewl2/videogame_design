@@ -11,15 +11,12 @@ config_version=5
 [application]
 
 config/name="kaijewl2_game"
-run/main_scene="uid://prtflmfvb5p4"
-config/features=PackedStringArray("4.4", "Forward Plus")
+run/main_scene="uid://vevtag5f0dnh"
+config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://art/icon.svg"
 
 [display]
 
-window/size/viewport_width=320
-window/size/viewport_height=240
-window/size/mode=3
 window/size/borderless=true
 window/stretch/mode="viewport"
 

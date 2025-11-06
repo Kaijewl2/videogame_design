@@ -1,0 +1,27 @@
+[gd_resource type="BehaviorTree" load_steps=9 format=3 uid="uid://ce2dur7gi574a"]
+
+[sub_resource type="BlackboardPlan" id="BlackboardPlan_oiscc"]
+
+[sub_resource type="BTFail" id="BTFail_oiscc"]
+
+[sub_resource type="BTSequence" id="BTSequence_oiscc"]
+children = [SubResource("BTFail_oiscc")]
+
+[sub_resource type="BTWait" id="BTWait_ubc4n"]
+duration = 3.0
+
+[sub_resource type="BTAlwaysFail" id="BTAlwaysFail_oiscc"]
+children = [SubResource("BTWait_ubc4n")]
+
+[sub_resource type="BTConsolePrint" id="BTConsolePrint_2gl7a"]
+text = "Don't Panic!"
+
+[sub_resource type="BTSelector" id="BTSelector_ei2r7"]
+children = [SubResource("BTAlwaysFail_oiscc"), SubResource("BTConsolePrint_2gl7a")]
+
+[sub_resource type="BTSelector" id="BTSelector_ubc4n"]
+children = [SubResource("BTSequence_oiscc"), SubResource("BTSelector_ei2r7")]
+
+[resource]
+blackboard_plan = SubResource("BlackboardPlan_oiscc")
+root_task = SubResource("BTSelector_ubc4n")
