@@ -1,12 +1,10 @@
-[gd_scene load_steps=25 format=3 uid="uid://vevtag5f0dnh"]
+[gd_scene load_steps=21 format=3 uid="uid://vevtag5f0dnh"]
 
 [ext_resource type="Texture2D" uid="uid://bo6v2ka4acp8g" path="res://art/icon.svg" id="1_fuej0"]
 [ext_resource type="PackedScene" uid="uid://ce08gjhvd82ms" path="res://scenes/player_3d.tscn" id="1_qudg5"]
-[ext_resource type="PackedScene" uid="uid://7ourhq0gg24r" path="res://scenes/boss.tscn" id="2_qejwk"]
 [ext_resource type="Shader" uid="uid://bjl42yspei5n7" path="res://shaders/psx.gdshader" id="3_482ig"]
 [ext_resource type="Material" uid="uid://xqa74odaww10" path="res://materials/concrete.tres" id="4_482ig"]
-[ext_resource type="Texture2D" uid="uid://dco1xkitdq0cu" path="res://art/playerGrey_up1.png" id="6_bygsx"]
-[ext_resource type="PackedScene" uid="uid://cr6l1emnn2s2i" path="res://scenes/goblin.tscn" id="7_tsfeg"]
+[ext_resource type="PackedScene" uid="uid://b184d120wwcww" path="res://scenes/test_enemy.tscn" id="7_tsfeg"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4xowi"]
 sky_top_color = Color(0, 0, 0, 1)
@@ -36,9 +34,10 @@ shader_parameter/resolution = Vector2i(320, 240)
 material = SubResource("ShaderMaterial_bygsx")
 rings = 2
 
-[sub_resource type="NavigationMesh" id="NavigationMesh_fuej0"]
-vertices = PackedVector3Array(-1.04474, -0.0857319, -9.39494, 0.955259, -0.0857319, -9.64494, 0.955259, -0.0857319, -20.1449, -16.0447, -0.0857319, -7.39494, -1.04474, -0.0857319, -7.39494, -16.0447, -0.0857319, -20.1449, 6.70526, -0.0857319, -7.39494, 6.95526, -0.0857319, -7.39494, 6.95526, -0.0857319, -8.89494, 6.45526, -0.0857319, -9.14494, 2.95526, -0.0857319, -9.64494, 8.70526, -0.0857319, -9.14494, 8.70526, -0.0857319, -20.1449, 3.20526, -0.0857319, -7.39494, 3.45526, -0.0857319, -7.39494, 3.70526, -0.0857319, -9.14494, 7.20526, -0.0857319, -6.39494, 6.45526, -0.0857319, -5.89494, 35.7053, -0.0857319, -20.1449, 9.20526, -0.0857319, -8.89494, 8.95526, -0.0857319, -6.39494, 3.70526, -0.0857319, -5.89494, 2.95526, -0.0857319, -5.39494, 2.70526, -0.0857319, 8.85506, 2.20526, -0.0857319, 9.10506, 2.95526, -0.0857319, 11.6051, 4.45526, -0.0857319, 11.6051, 2.70526, -0.0857319, 5.10506, 1.20526, -0.0857319, 4.85506, 4.70526, -0.0857319, 12.6051, 35.7053, -0.0857319, 12.6051, 1.20526, -0.0857319, -5.39494, -0.0447407, 1.16427, -8.64494, -0.0447407, 1.16427, -6.39494, 2.20526, 1.16427, -6.39494, 2.20526, 1.16427, -8.64494, 4.45526, 0.914268, -8.14494, 4.45526, 0.914268, -6.89494, 5.70526, 0.914268, -6.89494, 5.70526, 0.914268, -8.14494, -0.794741, -0.0857319, -5.39494, -0.0447407, -0.0857319, 5.10506, -0.0447407, -0.0857319, 7.10506, -16.0447, -0.0857319, 7.10506, 0.955259, 0.664268, 5.85506, 0.955259, 1.16427, 8.10506, 1.70526, 1.16427, 8.10506, 1.70526, 0.664268, 5.85506, 2.45526, -0.0857319, 11.8551, 0.205259, -0.0857319, 9.10506, 2.45526, -0.0857319, 13.6051, -16.0447, -0.0857319, 32.1051, 3.70526, -0.0857319, 32.1051, 3.70526, -0.0857319, 13.8551, 7.20526, 1.91427, 11.6051, 7.20526, 1.91427, 12.1051, 7.70526, 1.91427, 12.1051, 7.70526, 1.91427, 11.6051, 4.70526, -0.0857319, 13.6051, 35.7053, -0.0857319, 32.1051)
-polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(0, 4, 3), PackedInt32Array(3, 5, 0), PackedInt32Array(0, 5, 2), PackedInt32Array(7, 6, 8), PackedInt32Array(8, 6, 9), PackedInt32Array(9, 10, 11), PackedInt32Array(11, 10, 12), PackedInt32Array(12, 10, 2), PackedInt32Array(14, 13, 15), PackedInt32Array(15, 13, 10), PackedInt32Array(10, 1, 2), PackedInt32Array(11, 8, 9), PackedInt32Array(9, 15, 10), PackedInt32Array(7, 16, 6), PackedInt32Array(6, 16, 17), PackedInt32Array(19, 18, 20), PackedInt32Array(14, 21, 13), PackedInt32Array(13, 21, 22), PackedInt32Array(11, 12, 19), PackedInt32Array(19, 12, 18), PackedInt32Array(16, 20, 17), PackedInt32Array(23, 25, 24), PackedInt32Array(25, 23, 26), PackedInt32Array(26, 23, 27), PackedInt32Array(26, 27, 17), PackedInt32Array(26, 17, 20), PackedInt32Array(21, 17, 22), PackedInt32Array(22, 17, 27), PackedInt32Array(22, 27, 28), PackedInt32Array(26, 20, 29), PackedInt32Array(29, 20, 30), PackedInt32Array(30, 20, 18), PackedInt32Array(28, 31, 22), PackedInt32Array(35, 34, 32), PackedInt32Array(32, 34, 33), PackedInt32Array(39, 38, 36), PackedInt32Array(36, 38, 37), PackedInt32Array(28, 41, 31), PackedInt32Array(31, 41, 40), PackedInt32Array(41, 42, 40), PackedInt32Array(40, 42, 4), PackedInt32Array(4, 42, 3), PackedInt32Array(3, 42, 43), PackedInt32Array(47, 46, 44), PackedInt32Array(44, 46, 45), PackedInt32Array(48, 24, 25), PackedInt32Array(24, 48, 49), PackedInt32Array(49, 48, 50), PackedInt32Array(49, 50, 43), PackedInt32Array(43, 50, 52), PackedInt32Array(43, 52, 51), PackedInt32Array(43, 42, 49), PackedInt32Array(50, 53, 52), PackedInt32Array(57, 56, 54), PackedInt32Array(54, 56, 55), PackedInt32Array(53, 58, 52), PackedInt32Array(52, 58, 59), PackedInt32Array(59, 58, 30), PackedInt32Array(58, 29, 30)]
+[sub_resource type="NavigationMesh" id="NavigationMesh_5ax7r"]
+vertices = PackedVector3Array(-1.0522575, -0.50573194, -9.40189, 0.94774246, -0.50573194, -9.65189, 0.94774246, -0.50573194, -19.65189, -15.552258, -0.50573194, -7.40189, -1.0522575, -0.50573194, -7.40189, -15.552258, -0.50573194, -19.65189, 6.6977425, -0.50573194, -7.40189, 6.9477425, -0.50573194, -7.40189, 6.9477425, -0.50573194, -8.90189, 6.4477425, -0.50573194, -9.15189, 2.9477425, -0.50573194, -9.65189, 8.697742, -0.50573194, -9.15189, 8.697742, -0.50573194, -19.65189, 3.1977425, -0.50573194, -7.40189, 3.4477425, -0.50573194, -7.40189, 3.6977425, -0.50573194, -9.15189, 7.1977425, -0.50573194, -6.40189, 6.4477425, -0.50573194, -5.90189, 35.197742, -0.50573194, -19.65189, 9.197742, -0.50573194, -8.90189, 8.947742, -0.50573194, -6.40189, 3.6977425, -0.50573194, -5.90189, 2.9477425, -0.50573194, -5.40189, 2.6977425, -0.50573194, 8.84811, 2.1977425, -0.50573194, 9.09811, 2.9477425, -0.50573194, 11.59811, 4.4477425, -0.50573194, 11.59811, 2.6977425, -0.50573194, 5.09811, 1.1977425, -0.50573194, 4.84811, 4.6977425, -0.50573194, 12.59811, 35.197742, -0.50573194, 12.59811, 1.1977425, -0.50573194, -5.40189, -0.052257538, 0.844268, -8.65189, -0.052257538, 0.844268, -6.40189, 2.1977425, 0.844268, -6.40189, 2.1977425, 0.844268, -8.65189, 4.4477425, 0.43426806, -8.15189, 4.4477425, 0.43426806, -6.90189, 5.6977425, 0.43426806, -6.90189, 5.6977425, 0.43426806, -8.15189, -0.80225754, -0.50573194, -5.40189, -0.052257538, -0.50573194, 5.09811, -0.052257538, -0.50573194, 7.09811, -15.552258, -0.50573194, 7.09811, 0.94774246, 0.34426802, 5.84811, 0.94774246, 0.774268, 8.09811, 1.6977425, 0.774268, 8.09811, 1.6977425, 0.34426802, 5.84811, 0.94774246, 0.5342681, 6.97311, 1.6977425, 0.5342681, 6.97311, 2.4477425, -0.50573194, 11.84811, 0.19774246, -0.50573194, 9.09811, 2.4477425, -0.50573194, 13.59811, -15.552258, -0.50573194, 31.34811, 3.6977425, -0.50573194, 31.34811, 3.6977425, -0.50573194, 13.84811, 7.1977425, 1.5042679, 11.59811, 7.1977425, 1.5042679, 12.09811, 7.6977425, 1.5042679, 12.09811, 7.6977425, 1.5042679, 11.59811, 4.6977425, -0.50573194, 13.59811, 35.197742, -0.50573194, 31.34811)
+polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(0, 4, 3), PackedInt32Array(3, 5, 0), PackedInt32Array(0, 5, 2), PackedInt32Array(7, 6, 8), PackedInt32Array(8, 6, 9), PackedInt32Array(9, 10, 11), PackedInt32Array(11, 10, 12), PackedInt32Array(12, 10, 2), PackedInt32Array(14, 13, 15), PackedInt32Array(15, 13, 10), PackedInt32Array(10, 1, 2), PackedInt32Array(11, 8, 9), PackedInt32Array(9, 15, 10), PackedInt32Array(7, 16, 6), PackedInt32Array(6, 16, 17), PackedInt32Array(20, 19, 18), PackedInt32Array(14, 21, 13), PackedInt32Array(13, 21, 22), PackedInt32Array(11, 12, 19), PackedInt32Array(19, 12, 18), PackedInt32Array(16, 20, 17), PackedInt32Array(23, 25, 24), PackedInt32Array(25, 23, 26), PackedInt32Array(26, 23, 27), PackedInt32Array(26, 27, 17), PackedInt32Array(26, 17, 20), PackedInt32Array(21, 17, 22), PackedInt32Array(22, 17, 27), PackedInt32Array(22, 27, 28), PackedInt32Array(26, 20, 29), PackedInt32Array(29, 20, 30), PackedInt32Array(30, 20, 18), PackedInt32Array(28, 31, 22), PackedInt32Array(35, 34, 32), PackedInt32Array(32, 34, 33), PackedInt32Array(39, 38, 36), PackedInt32Array(36, 38, 37), PackedInt32Array(28, 41, 31), PackedInt32Array(31, 41, 40), PackedInt32Array(41, 42, 40), PackedInt32Array(40, 42, 4), PackedInt32Array(4, 42, 3), PackedInt32Array(3, 42, 43), PackedInt32Array(47, 49, 44), PackedInt32Array(44, 49, 48), PackedInt32Array(48, 49, 46), PackedInt32Array(48, 46, 45), PackedInt32Array(50, 24, 25), PackedInt32Array(24, 50, 51), PackedInt32Array(51, 50, 52), PackedInt32Array(51, 52, 43), PackedInt32Array(43, 52, 54), PackedInt32Array(43, 54, 53), PackedInt32Array(43, 42, 51), PackedInt32Array(54, 52, 55), PackedInt32Array(59, 58, 56), PackedInt32Array(56, 58, 57), PackedInt32Array(55, 60, 54), PackedInt32Array(54, 60, 61), PackedInt32Array(61, 60, 30), PackedInt32Array(60, 29, 30)]
+cell_height = 0.01
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_qejwk"]
 data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
@@ -67,18 +66,6 @@ albedo_color = Color(0, 0.0509804, 0.0784314, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tsfeg"]
 albedo_color = Color(0, 0.0509804, 0.0784314, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_482ig"]
-render_priority = 0
-shader = ExtResource("3_482ig")
-shader_parameter/affine_mapping = false
-shader_parameter/albedo = ExtResource("6_bygsx")
-shader_parameter/alpha_scissor = 0.5
-shader_parameter/jitter = 0.25
-shader_parameter/resolution = Vector2i(320, 240)
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_bygsx"]
-material = SubResource("ShaderMaterial_482ig")
-
 [node name="boss_battle" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -90,14 +77,14 @@ shadow_enabled = true
 directional_shadow_split_1 = 0.657
 
 [node name="player_3D" parent="." instance=ExtResource("1_qudg5")]
-boss_path = NodePath("../boss")
+boss_path = NodePath("../test_enemy")
 
 [node name="MeshInstance3D" parent="player_3D" index="0"]
 mesh = SubResource("CapsuleMesh_tsfeg")
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0419728, -0.0293183, -0.0869086)
-navigation_mesh = SubResource("NavigationMesh_fuej0")
+navigation_mesh = SubResource("NavigationMesh_5ax7r")
 
 [node name="floor" type="CSGBox3D" parent="NavigationRegion3D"]
 transform = Transform3D(11.685, 0, 0, 0, 11.685, 0, 0, 0, 11.685, 9.81329, -0.679542, 5.92891)
@@ -152,68 +139,36 @@ use_collision = true
 size = Vector3(1.22066, 0.200011, 1.3354)
 material = SubResource("StandardMaterial3D_eyxgl")
 
-[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0419728, 0.0293183, 0.0869086)
 use_collision = true
 
-[node name="wall" type="CSGBox3D" parent="CSGCombiner3D"]
+[node name="wall" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.9646, 3.0173, 5.85495)
 use_collision = true
 size = Vector3(0.343528, 7.12195, 52.3945)
 material = SubResource("StandardMaterial3D_4lc55")
 
-[node name="wall2" type="CSGBox3D" parent="CSGCombiner3D"]
+[node name="wall2" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.84003, 3.01016, 32.1683)
 use_collision = true
 size = Vector3(52.5982, 7.12195, 0.434998)
 material = SubResource("StandardMaterial3D_482ig")
 
-[node name="wall3" type="CSGBox3D" parent="CSGCombiner3D"]
+[node name="wall3" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.77572, 3.13911, -20.5213)
 use_collision = true
 size = Vector3(52.7399, 7.12195, 0.434998)
 material = SubResource("StandardMaterial3D_bygsx")
 
-[node name="wall4" type="CSGBox3D" parent="CSGCombiner3D"]
+[node name="wall4" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.3818, 3.0346, 5.85913)
 use_collision = true
 size = Vector3(0.343528, 7.12195, 52.2334)
 material = SubResource("StandardMaterial3D_tsfeg")
 
-[node name="boss" parent="." instance=ExtResource("2_qejwk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.7015, 0, -14.8098)
+[node name="test_enemy" parent="." instance=ExtResource("7_tsfeg")]
+transform = Transform3D(-0.869676, 0, 0.49362308, 0, 1, 0, -0.49362308, 0, -0.869676, 5.5223036, -0.47943485, -4.9841313)
 player_path = NodePath("../player_3D")
 
-[node name="Skeleton3D" parent="boss/Armature" index="0"]
-bones/0/position = Vector3(0.16428703, 0.052389383, -77.56817)
-bones/0/rotation = Quaternion(-0.37284917, 0.37637493, -0.38452455, 0.75595397)
-bones/1/rotation = Quaternion(0.13074073, -0.051197913, -0.072888106, 0.98740727)
-bones/2/rotation = Quaternion(-0.037258815, 0.002513946, -0.03625699, 0.9986446)
-bones/3/rotation = Quaternion(0.015104542, -0.0024640777, -0.037782278, 0.9991689)
-bones/4/rotation = Quaternion(-0.108967684, -0.086659536, 0.02122611, 0.9900332)
-bones/5/rotation = Quaternion(-0.12316783, -0.088708036, 0.025348453, 0.98808813)
-bones/7/rotation = Quaternion(-0.55912954, -0.4423321, 0.64856374, -0.26661143)
-bones/8/rotation = Quaternion(0.33012256, 0.49266243, -0.049813837, 0.8036301)
-bones/9/rotation = Quaternion(0.0060497792, 0.1658421, 0.29358953, 0.94141644)
-bones/10/rotation = Quaternion(-0.15483952, -0.09179393, 0.29860464, 0.9372481)
-bones/31/rotation = Quaternion(0.67793494, -0.34520087, 0.5265001, 0.37952384)
-bones/32/rotation = Quaternion(0.29524565, 0.42282113, -0.24578795, 0.82075614)
-bones/33/rotation = Quaternion(0.007695971, -0.19630098, -0.34583992, 0.91749734)
-bones/34/rotation = Quaternion(-0.3991355, -0.27126843, 0.035140973, 0.8751397)
-bones/55/rotation = Quaternion(0.14229265, 0.50824684, 0.84223104, 0.109931834)
-bones/56/rotation = Quaternion(-0.6532882, -0.045993347, 0.046796802, 0.75426084)
-bones/57/rotation = Quaternion(0.73860604, -0.21845503, 0.0044970824, 0.63774484)
-bones/58/rotation = Quaternion(0.2938291, -0.08536594, 0.0226448, 0.95176905)
-bones/60/rotation = Quaternion(-0.102147445, 0.54090345, 0.7417651, 0.38311085)
-bones/61/rotation = Quaternion(-0.16072619, 0.06114851, -0.03222396, 0.98457587)
-bones/62/rotation = Quaternion(0.10877766, 0.28944594, -0.023752542, 0.9506968)
-bones/63/rotation = Quaternion(0.36152217, 0.058409557, -0.019256946, 0.93033284)
-
-[node name="MeshInstance3D" parent="boss" index="7"]
-transform = Transform3D(-0.9979, 0, -0.0647764, 0, 1, 0, 0.0647764, 0, -0.9979, 0.184, 0.741, -0.0790005)
-mesh = SubResource("CapsuleMesh_bygsx")
-
-[node name="goblin" parent="." instance=ExtResource("7_tsfeg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.581608, 0.44732964, -1.9687176)
-
 [editable path="player_3D"]
-[editable path="boss"]

@@ -1,3 +1,5 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+*.glb
+models/alien_soldier.glb.import

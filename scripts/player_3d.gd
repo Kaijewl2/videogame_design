@@ -102,7 +102,6 @@ func hit(damage):
 
 func use_stamina():
 	stamina_bar.value -= 10
-	print(stamina_bar.value)
 	
 	if stamina_bar.value > 0.0:
 		speed = DASH_SPEED
