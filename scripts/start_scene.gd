@@ -1,22 +1,26 @@
 extends Control
 
 @onready var typewriter_text: Label = $Label
-var running: bool = false
-# Called when the node enters the scene tree for the first time.
+
 func _ready() -> void:
-	pass # Replace with function body.
+	text_process()
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	if running == true:
-		await get_tree().create_timer(3).timeout
-		typewriter_text.SetText("hi")
-		await get_tree().create_timer(3).timeout
-		typewriter_text.SetText("I hope this works!")
-		await get_tree().create_timer(3).timeout
-		typewriter_text.SetText("Why is this so?")
-
-
-func _on_timer_timeout() -> void:
-	running = !running
+func text_process() -> void:
+	await get_tree().create_timer(1).timeout
+	typewriter_text.SetText("SAVE THE LAST HUMAN FAMILY")
+	await get_tree().create_timer(3).timeout
+	typewriter_text.SetText("YOU ARE THE LAST HOPE OF MANKIND.")
+	await get_tree().create_timer(3).timeout
+	typewriter_text.SetText("YOUR MISSION IS TO STOP THE ROBOTRONS")
+	await get_tree().create_timer(3).timeout
+	typewriter_text.SetText("SAVING THE LAST HUMAN FAMILY IN THE PROCESS")
+	await get_tree().create_timer(3).timeout
+	typewriter_text.SetText("OPENING SHUTTLE IN")
+	await get_tree().create_timer(1.5).timeout
+	typewriter_text.SetText("3")
+	await get_tree().create_timer(2.3).timeout
+	typewriter_text.SetText("2")
+	await get_tree().create_timer(3.1).timeout
+	typewriter_text.SetText("1")
+	await get_tree().create_timer(3.5).timeout
+	get_tree().change_scene_to_file("res://scenes/boss_battle.tscn")

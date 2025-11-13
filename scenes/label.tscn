@@ -1,18 +1,27 @@
-[gd_scene load_steps=2 format=3 uid="uid://d4byrtarhp15t"]
+[gd_scene load_steps=5 format=3 uid="uid://d4byrtarhp15t"]
 
+[ext_resource type="FontFile" uid="uid://dvcixgfv8f40b" path="res://fonts/3270-Regular.ttf" id="1_2ey3j"]
 [ext_resource type="Script" uid="uid://oytilsnp58uu" path="res://scripts/label.gd" id="1_2uqk7"]
+[ext_resource type="AudioStream" uid="uid://83tlyhti43kq" path="res://sounds/key_type_2.wav" id="2_a3yin"]
 
-[node name="Label" type="Label" node_paths=PackedStringArray("text_display", "timer")]
+[sub_resource type="LabelSettings" id="LabelSettings_cm5sy"]
+font = ExtResource("1_2ey3j")
+font_size = 51
+font_color = Color(1, 0, 0, 1)
+
+[node name="Label" type="Label"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+label_settings = SubResource("LabelSettings_cm5sy")
 script = ExtResource("1_2uqk7")
-text_display = NodePath(".")
-timer = NodePath("Timer")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.05
+
+[node name="key_sfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_a3yin")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

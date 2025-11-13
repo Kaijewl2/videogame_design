@@ -1,28 +1,27 @@
 extends Label
 
-@export var text_display: Label
-@export var timer: Timer
-
 var full_text: String
 var character_pos: int
-var animating: bool
 
-func _ready() -> void:
-	pass
-
-func _process(delta: float) -> void:
-	pass
+@onready var text_display: Label = $"."
+@onready var timer: Timer = $Timer
+@onready var key_sfx: AudioStreamPlayer = $key_sfx
 
 func _on_timer_timeout() -> void:
 	text_display.text = full_text
 	character_pos += 1
+	key_sfx.play()
 	text_display.text = full_text.substr(0, character_pos)
 	if character_pos == full_text.length():
 		timer.stop()
-		animating = false
+		key_sfx.stop()
 
 func SetText(new_text: String):
 	full_text = new_text
 	character_pos = 0
-	animating = true
 	timer.start()
+	
+"""func SetNewlineText(new_text: String): # Todo: Fix this so previous line's text dosen't animate a second time
+	full_text += "\n" + new_text
+	character_pos = 0
+	timer.start()"""

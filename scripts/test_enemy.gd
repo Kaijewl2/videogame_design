@@ -91,7 +91,6 @@ func target_in_range():
 func target_in_fire_range():
 	return global_position.distance_to(player.global_position) < FIRE_RANGE and global_position.distance_to(player.global_position) > (ATTACK_RANGE + 3) 
 
-
 func _on_timer_timeout() -> void:
 	timer.wait_time = choose([3.0, 4.5, 5.0])
 	if !agro: 
