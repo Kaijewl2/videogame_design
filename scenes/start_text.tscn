@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=3 uid="uid://pwayg55urf3f"]
+
+[ext_resource type="Script" uid="uid://c8djwq3hnxn65" path="res://scripts/start_text.gd" id="1_pvbcq"]
+[ext_resource type="AudioStream" uid="uid://83tlyhti43kq" path="res://sounds/key_type_2.wav" id="2_8gnda"]
+[ext_resource type="FontFile" uid="uid://dvcixgfv8f40b" path="res://fonts/3270-Regular.ttf" id="2_hwb4h"]
+[ext_resource type="PackedScene" uid="uid://d4byrtarhp15t" path="res://scenes/label.tscn" id="4_u04ds"]
+
+[node name="startText" type="Control" node_paths=PackedStringArray("typewriter_text")]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_pvbcq")
+typewriter_text = NodePath("Label")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1155.0
+offset_bottom = 650.0
+color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_right = 577.0
+offset_bottom = 389.0
+theme_override_fonts/normal_font = ExtResource("2_hwb4h")
+theme_override_font_sizes/normal_font_size = 60
+text = "Don't Panic
+Hell Is Full
+Blood Is Fuel"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+ignore_time_scale = true
+
+[node name="key_sfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_8gnda")
+volume_db = -8.447
+
+[node name="Label" parent="." instance=ExtResource("4_u04ds")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 433.0
+offset_top = 498.0
+offset_right = 720.0
+offset_bottom = 585.0
+grow_horizontal = 1
+grow_vertical = 1
+text = "Sigima"
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

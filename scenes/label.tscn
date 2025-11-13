@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://d4byrtarhp15t"]
+
+[ext_resource type="Script" uid="uid://oytilsnp58uu" path="res://scripts/label.gd" id="1_2uqk7"]
+
+[node name="Label" type="Label" node_paths=PackedStringArray("text_display", "timer")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2uqk7")
+text_display = NodePath(".")
+timer = NodePath("Timer")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.05
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

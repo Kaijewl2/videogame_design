@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlgobae65oxvh"]
+
+[ext_resource type="Script" uid="uid://t83j2287g34d" path="res://scripts/start_scene.gd" id="1_u7rsi"]
+[ext_resource type="PackedScene" uid="uid://d4byrtarhp15t" path="res://scenes/label.tscn" id="2_i331m"]
+[ext_resource type="AudioStream" uid="uid://83tlyhti43kq" path="res://sounds/key_type_2.wav" id="3_0kdh5"]
+
+[node name="start_scene" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_u7rsi")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1155.0
+offset_bottom = 650.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" parent="." instance=ExtResource("2_i331m")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 433.0
+offset_top = 498.0
+offset_right = 720.0
+offset_bottom = 585.0
+grow_horizontal = 1
+grow_vertical = 1
+text = "3"
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="key_sfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_0kdh5")
+volume_db = -8.447
