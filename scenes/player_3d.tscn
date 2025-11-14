@@ -84,3 +84,12 @@ texture_progress = ExtResource("5_yevqy")
 [node name="dash_sound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_sxlqi")
 pitch_scale = 3.44
+
+[node name="StairsBelowRayCast" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.036391, 0)
+target_position = Vector3(0, -0.75, 0)
+collide_with_areas = true
+
+[node name="StairsAheadRayCast" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.8017118)
+target_position = Vector3(0, -0.55, 0)

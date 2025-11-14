@@ -24,6 +24,8 @@ const DASH_SPEED = 122.0
 @onready var stamina_bar = $Stamina_UI
 @onready var head = $Head
 @onready var camera = $Head/Camera3D
+@onready var stairs_below_ray_cast: RayCast3D = $StairsBelowRayCast
+@onready var stairs_ahead_ray_cast: RayCast3D = $StairsAheadRayCast
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -39,6 +41,7 @@ func _process(delta: float):
 	if Input.is_action_pressed("ctrl") and stamina_bar.value > 0.0:
 		$dash_sound.play()
 		use_stamina()
+	
 
 # Gravity logic
 func _physics_process(delta):
@@ -105,3 +108,7 @@ func use_stamina():
 		speed = DASH_SPEED
 	elif stamina_bar.value <= 0.0:
 		speed = walk_speed
+
+func is_surface_too_steep(normal: Vector3) -> bool:
+	return normal.angle_to(Vector3.UP) > self.floor_max_angle
+	
