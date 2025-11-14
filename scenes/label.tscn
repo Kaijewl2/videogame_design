@@ -6,7 +6,7 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_cm5sy"]
 font = ExtResource("1_2ey3j")
-font_size = 51
+font_size = 32
 font_color = Color(1, 0, 0, 1)
 
 [node name="Label" type="Label"]
@@ -16,6 +16,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 label_settings = SubResource("LabelSettings_cm5sy")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
 script = ExtResource("1_2uqk7")
 
 [node name="Timer" type="Timer" parent="."]

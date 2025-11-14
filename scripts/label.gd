@@ -21,7 +21,3 @@ func SetText(new_text: String):
 	character_pos = 0
 	timer.start()
 	
-"""func SetNewlineText(new_text: String): # Todo: Fix this so previous line's text dosen't animate a second time
-	full_text += "\n" + new_text
-	character_pos = 0
-	timer.start()"""

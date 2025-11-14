@@ -15,7 +15,6 @@ const BASE_FOV = 75.0
 const FOV_CHANGE = 1.5
 const DASH_SPEED = 122.0
 
-@export var boss_path : NodePath
 @export var speed = 4.0
 @export var walk_speed = 4.0
 @export var sprint_speed = 5.5
@@ -28,7 +27,6 @@ const DASH_SPEED = 122.0
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	boss = get_node(boss_path)
 
 func _process(delta: float):
 	# Player HP GUI
