@@ -12,6 +12,7 @@ const ATTACK_RANGE = 1.7
 const FIRE_RANGE = 8.0
 const MELEE_DAMAGE = 2
 const SHOOT_DAMAGE = 4
+const POINT_VALUE = 200
 
 @export var player_path : NodePath
 
@@ -100,3 +101,6 @@ func _on_timer_timeout() -> void:
 func choose(arr):
 	arr.shuffle()
 	return arr.front()
+	
+func add_player_points():
+	player.add_points(POINT_VALUE)

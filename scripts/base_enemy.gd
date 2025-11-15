@@ -9,12 +9,11 @@ var dir: Vector3
 const SPEED = 2.0
 const ATTACK_RANGE = 1.7
 const MELEE_DAMAGE = 2
+const POINT_VALUE = 100
 
 @export var player_path : NodePath
 
 @onready var repulsor_sfx: AudioStreamPlayer = $repulsor_sfx
-@onready var healthBarMax = $HealthBar.max_value
-@onready var healthBar = $HealthBar
 @onready var nav_agent = $NavigationAgent3D
 @onready var anim_tree = $AnimationTree
 @onready var collisionShape = $CollisionShape3D
@@ -24,8 +23,6 @@ const MELEE_DAMAGE = 2
 func _ready() -> void:
 	player = get_node(player_path)
 	state_machine = anim_tree.get("parameters/playback")
-	healthBar.max_value = hp
-	healthBar.value = healthBar.max_value
 	
 func _physics_process(delta: float) -> void:
 	match state_machine.get_current_node():
@@ -46,8 +43,6 @@ func _physics_process(delta: float) -> void:
 		"death":
 			collisionShape.disabled = true
 
-	$HealthBar/Label.text = str(int(hp)) + " / " + str(int(healthBar.max_value))
-
 func hit_player():
 	if target_in_range():
 		player.hit(MELEE_DAMAGE)
@@ -58,8 +53,6 @@ func hit(damage):
 		anim_tree.set("parameters/conditions/death", true)
 	else:
 		anim_tree.set("parameters/conditions/hit", true)
-	healthBar.value = hp
-
 
 func target_in_range():
 	return global_position.distance_to(player.global_position) < ATTACK_RANGE
@@ -67,3 +60,6 @@ func target_in_range():
 func choose(arr):
 	arr.shuffle()
 	return arr.front()
+
+func add_player_points():
+	player.add_points(POINT_VALUE)

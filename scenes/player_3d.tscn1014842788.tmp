@@ -1,8 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://ce08gjhvd82ms"]
+[gd_scene load_steps=10 format=3 uid="uid://ce08gjhvd82ms"]
 
 [ext_resource type="Script" uid="uid://d0dcvy32nyifj" path="res://scripts/player_3d.gd" id="1_52vux"]
 [ext_resource type="Script" uid="uid://yt41gvmhyurv" path="res://scripts/hand.gd" id="2_2djwe"]
-[ext_resource type="FontFile" uid="uid://dvcixgfv8f40b" path="res://fonts/3270-Regular.ttf" id="2_460ac"]
 [ext_resource type="PackedScene" uid="uid://bivo5w2l7xqin" path="res://scenes/arm_blaster.tscn" id="3_4jfb6"]
 [ext_resource type="Texture2D" uid="uid://bo6v2ka4acp8g" path="res://art/icon.svg" id="4_4jfb6"]
 [ext_resource type="Texture2D" uid="uid://dxgn2ivcurr7j" path="res://art/blue_bar.png" id="5_yevqy"]
@@ -15,16 +14,6 @@ albedo_color = Color(0, 0.247059, 1, 1)
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_2djwe"]
 points = PackedVector3Array(-0.125207, -0.532801, -0.480507, 0.0227831, 0.47607, 0.498884, 0.169713, 0.559144, 0.464172, 0.231051, -0.803591, 0.320455, 0.40741, 0.651043, -0.243523, -0.482789, 0.594843, 0.0822132, -0.362868, -0.682312, 0.289697, 0.469044, -0.654529, -0.0662713, -0.127444, 0.842701, -0.338103, -0.393435, -0.683942, -0.244717, 0.438255, 0.623309, 0.200849, 0.0841477, 0.977454, 0.114795, -0.0682023, -0.976458, -0.12927, 0.20055, -0.563129, -0.451454, -0.185527, 0.595453, -0.453475, -0.273363, 0.592268, 0.407754, -0.00693649, -0.476823, 0.49966, 0.375821, -0.588614, 0.316955, 0.111579, 0.563059, -0.481177, -0.41725, 0.527866, -0.270497, -0.484546, -0.596972, -0.0665097, -0.279747, 0.908561, 0.0533361, -0.250197, -0.880712, 0.205319, 0.263647, -0.902771, -0.127394, 0.293368, 0.871526, -0.157196, 0.373412, -0.526319, -0.328246, 0.499663, 0.476641, -0.00688856, 0.0531056, 0.875001, 0.324703, -0.154543, -0.590854, 0.465879, -0.0972799, -0.782358, -0.398188, -0.387649, -0.498171, 0.31565, -0.30068, -0.587995, -0.388901)
-
-[sub_resource type="LabelSettings" id="LabelSettings_ali1n"]
-font = ExtResource("2_460ac")
-font_size = 104
-font_color = Color(0.7882353, 0.7882353, 0.7882353, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_aoiyr"]
-font = ExtResource("2_460ac")
-font_size = 64
-font_color = Color(0.78775924, 0.78775924, 0.78775924, 1)
 
 [node name="player_3D" type="CharacterBody3D"]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
@@ -41,23 +30,18 @@ shape = SubResource("ConvexPolygonShape3D_2djwe")
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 12.000001
-offset_top = -64.0
-offset_right = 236.0
-offset_bottom = 41.0
+offset_left = 9.0
+offset_top = -27.0
+offset_right = 112.185
+offset_bottom = 18.0
 grow_vertical = 0
 scale = Vector2(0.35, 0.35)
 theme_override_font_sizes/font_size = 32
 text = "HP: "
-label_settings = SubResource("LabelSettings_ali1n")
 
 [node name="Points" type="Label" parent="."]
-offset_left = 15.0
-offset_top = 15.0
-offset_right = 271.0
-offset_bottom = 72.0
-text = "0"
-label_settings = SubResource("LabelSettings_aoiyr")
+offset_right = 122.0
+offset_bottom = 43.0
 
 [node name="Head" type="Node3D" parent="."]
 
@@ -68,7 +52,7 @@ transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0, 0.88757, 0.052835
 script = ExtResource("2_2djwe")
 
 [node name="ArmBlaster" parent="Head/Camera3D/hand" instance=ExtResource("3_4jfb6")]
-transform = Transform3D(-0.048994537, 0, 1.1689737, 0, 1.17, 0, -1.1689737, 0, -0.048994537, 0.32, -0.16500002, -0.292)
+transform = Transform3D(-5.11423e-08, 0, 1.17, 0, 1.17, 0, -1.17, 0, -5.11423e-08, 0.32, -0.165, -0.292)
 damage = 15.0
 
 [node name="Crosshair_UI" type="TextureRect" parent="."]
@@ -92,12 +76,12 @@ expand_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 14.0
-offset_top = 298.0
-offset_right = 1255.0
-offset_bottom = 368.0
+offset_left = 10.0
+offset_top = 111.0
+offset_right = 1251.0
+offset_bottom = 181.0
 grow_vertical = 2
-scale = Vector2(0.24, 0.24)
+scale = Vector2(0.06, 0.06)
 value = 100.0
 texture_progress = ExtResource("5_yevqy")
 
