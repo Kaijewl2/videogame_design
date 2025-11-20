@@ -7,6 +7,6 @@ func _ready() -> void:
 
 func text_process() -> void:
 	await get_tree().create_timer(1).timeout
-	typewriter_text.SetText("YOU ARE CLASSIFIED AS AN A-RANK SOLDIER, BORN TO AID IN THE DECADE LONG WAR AGAINST THE ZAPHBROX")
-	await get_tree().create_timer(10).timeout
-	get_tree().change_scene_to_file("res://scenes/boss_battle.tscn")
+	typewriter_text.SetText("YOU HAVE BEEN BORN AND TRAINED TO AID IN THE DECADE LONG WAR AGAINST THE ZAPHBROX")
+	await get_tree().create_timer(8).timeout
+	typewriter_text.SetText("ENTER THE QUANTUM TRANSPORTER AND PRESS 'E' TO SERVE PLANET EARTH")

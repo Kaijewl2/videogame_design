@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="kaijewl2_game"
-run/main_scene="uid://bpuikiuvgsx6m"
+run/main_scene="uid://cu7uefsix8fhe"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://art/icon.svg"
 
